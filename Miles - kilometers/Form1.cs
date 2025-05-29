@@ -27,26 +27,31 @@ namespace Miles___kilometers
 			if ((e.KeyChar >= '0') && (e.KeyChar <= '9'))
 			{
 				//цифра
+				//if (textBox1.Text.Contains("."))
+				//{
+				//	textBox1.Text.Replace(".", ",");
+				//}
 				return;
 			}
-			if(e.KeyChar == '.')
+			if (e.KeyChar == '.')
 			{
 				//точку заменим запятой
 				e.KeyChar = ',';
 			}
-			if(e.KeyChar == ',')
+			if (e.KeyChar == ',')
 			{
-				if(textBox1.Text.IndexOf(',') != -1)
+				if (textBox1.Text.IndexOf(',') != -1)
 				{
 					//запятая уже есть в поле редактирования
 					e.Handled = true;
 				}
 				return;
 			}
-			if(Char.IsControl(e.KeyChar))
+
+			if (Char.IsControl(e.KeyChar))
 			{
 				//<Enter>, <Backspace>,<Esc>
-				if(e.KeyChar == (char)Keys.Enter)
+				if (e.KeyChar == (char)Keys.Enter)
 				{
 					//нажата клавиша <Enter>
 					//установить курсор на кнопку OK
@@ -60,20 +65,30 @@ namespace Miles___kilometers
 		private void button1_Click(object sender, EventArgs e)
 		{
 			double mile; //расстояние в милях
-			double km; //расстояние в километрах
-					   //Если в поле редактирования нет данных,
-					   //то при попытке преобразовать пустую строку в число возникает исключение.
+			double km;   //расстояние в километрах
+						 //Если в поле редактирования нет данных,
+						 //то при попытке преобразовать пустую строку в число возникает исключение.
 			try
 			{
 				mile = Convert.ToDouble(textBox1.Text);
 				km = mile * 1.609344;
+				label3.Text = mile.ToString("n") + " ml";
 				label2.Text = km.ToString("n") + " km.";
+				textBox1.Clear();
 			}
-			catch 
+			catch
 			{
 				//обработка исключения:
 				//переместить курсор в поле редактирования
+				textBox1.Clear();
 				textBox1.Focus();
+			}
+		}
+		private void textBox1_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				button1_Click(sender, e);
 			}
 		}
 	}
