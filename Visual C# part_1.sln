@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miles - kilometers", "Miles - kilometers\Miles - kilometers.csproj", "{FD259AD8-23A4-4A3B-9E9F-604A382BA884}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pounds_kg", "Pounds_kg\Pounds_kg.csproj", "{7222EE5C-9E2A-4E95-9D82-25C996BD3AEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FD259AD8-23A4-4A3B-9E9F-604A382BA884}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD259AD8-23A4-4A3B-9E9F-604A382BA884}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD259AD8-23A4-4A3B-9E9F-604A382BA884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7222EE5C-9E2A-4E95-9D82-25C996BD3AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7222EE5C-9E2A-4E95-9D82-25C996BD3AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7222EE5C-9E2A-4E95-9D82-25C996BD3AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7222EE5C-9E2A-4E95-9D82-25C996BD3AEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FD259AD8-23A4-4A3B-9E9F-604A382BA884}</ProjectGuid>
+    <ProjectGuid>{7222EE5C-9E2A-4E95-9D82-25C996BD3AEF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Miles___kilometers</RootNamespace>
-    <AssemblyName>Miles - kilometers</AssemblyName>
+    <RootNamespace>Pounds_kg</RootNamespace>
+    <AssemblyName>Pounds_kg</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>math.ico</ApplicationIcon>
+    <ApplicationIcon>weight_icon_154609.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -83,7 +83,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="math.ico" />
+    <Content Include="weight_icon_154609.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
