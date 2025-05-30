@@ -55,7 +55,7 @@ namespace Miles___kilometers
 				{
 					//нажата клавиша <Enter>
 					//установить курсор на кнопку OK
-					//button1.Focus();
+					button1.Focus();
 					return;
 				}
 				//остальные символы запрещены
