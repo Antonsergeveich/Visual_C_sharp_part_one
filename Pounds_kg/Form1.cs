@@ -78,12 +78,5 @@ namespace Pounds_kg
 				textBox1.Focus();
 			}
 		}
-		private void textBox1_KeyDown(object sender, KeyEventArgs e)
-		{
-			if (e.KeyCode == Keys.Enter)
-			{
-				button1_Click(sender, e);
-			}
-		}
 	}
 }
