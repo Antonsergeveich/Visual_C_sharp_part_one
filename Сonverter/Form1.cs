@@ -22,32 +22,8 @@ namespace Сonverter
 		//затем - указать её в качестве обработчика это же события для компонента textBox2
 		private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			if ((e.KeyChar >= '0') && (e.KeyChar <= '9')) return;
-			if (e.KeyChar == '.') e.KeyChar = ',';
-			if (e.KeyChar == ',')
-			{
-				if ((textBox1.Text.IndexOf(',') != -1) ||
-					(textBox1.Text.Length == 0))
-				{
-					e.Handled = true;
-				}
-				return;
-			}
-			if (Char.IsControl(e.KeyChar))
-			{
-				if (e.KeyChar == (char)Keys.Enter)textBox2.Focus();
-			}
-			else
-			{
-				//Клавиша <Enter> нажата в поле Цена
-				button1.Focus();
-				return;
-			}
-			//Остальные символы запрещены
-			e.Handled = true;
+			textBox_KeyPress(sender, e);
 		}
-
-
 		//Изменился текст в поле редактирования textBox1 или textBox2
 		private void textBox1_TextChanged(object sender, EventArgs e)
 		{
@@ -73,7 +49,43 @@ namespace Сonverter
 			usd = Convert.ToDouble(textBox1.Text);
 			k = Convert.ToDouble(textBox2.Text);
 			rub = usd * k;
-			label3.Text = rub.ToString("C"); //Финансовый формат
+			label3.Text = "Result: " + rub.ToString("C"); //Финансовый формат
+		}
+
+		private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			textBox_KeyPress(sender, e);
+		}
+		private void textBox_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if ((e.KeyChar >= '0') && (e.KeyChar <= '9')) return;
+			if (e.KeyChar == '.') e.KeyChar = ',';
+			if (e.KeyChar == ',')
+			{
+				if ((textBox1.Text.IndexOf(',') != -1) ||
+					(textBox1.Text.Length == 0))
+				{
+					e.Handled = false;
+				}
+				return;
+			}
+			if (Char.IsControl(e.KeyChar))
+			{
+				if (e.KeyChar == (char)Keys.Enter)
+				{
+					if (sender.Equals(textBox1))
+					{
+						textBox2.Focus();
+					}
+					else
+					{
+						button1.Focus();
+					}
+					return;
+				}
+			}
+			//Остальные символы запрещены
+			e.Handled = true;
 		}
 	}
 }
