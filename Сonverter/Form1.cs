@@ -35,13 +35,7 @@ namespace Сonverter
 			}
 			if (Char.IsControl(e.KeyChar))
 			{
-				if (e.KeyChar == (char)Keys.Enter)
-					if (sender.Equals(textBox1.Text))
-					{
-						//клавиша <Enter> нажата в поле Курс
-						//переместить курсор в поле Цена
-						textBox2.Focus();
-					}
+				if (e.KeyChar == (char)Keys.Enter)textBox2.Focus();
 			}
 			else
 			{
