@@ -87,5 +87,21 @@ namespace Сonverter
 			//Остальные символы запрещены
 			e.Handled = true;
 		}
+
+		//private void textBox1_KeyDown(object sender, KeyEventArgs e)
+		//{
+		//	if(e.KeyCode == Keys.Enter)
+		//	{
+		//		e.SuppressKeyPress = true;
+		//	}
+		//}
+
+		//private void textBox2_KeyDown(object sender, KeyEventArgs e)
+		//{
+		//	if( e.KeyCode == Keys.Enter)
+		//	{
+		//		e.SuppressKeyPress = true;
+		//	}
+		//}
 	}
 }
