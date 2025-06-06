@@ -92,7 +92,21 @@ namespace Сonverter
 			if (e.KeyCode == Keys.Enter)
 			{
 				e.SuppressKeyPress = true;
+				if (sender.Equals(textBox1))
+				{
+					textBox2.Focus();
+				}
+				else
+				{
+					button1.Focus();
+				}
+				return;
 			}
+		}
+
+		private void textBox2_KeyDown(object sender, KeyEventArgs e)
+		{
+			textBox1_KeyDown (sender, e);
 		}
 	}
 }
