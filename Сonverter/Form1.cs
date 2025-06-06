@@ -51,7 +51,6 @@ namespace Сonverter
 			rub = usd * k;
 			label3.Text = "Result: " + rub.ToString("C"); //Финансовый формат
 		}
-
 		private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			textBox_KeyPress(sender, e);
@@ -88,20 +87,12 @@ namespace Сonverter
 			e.Handled = true;
 		}
 
-		//private void textBox1_KeyDown(object sender, KeyEventArgs e)
-		//{
-		//	if(e.KeyCode == Keys.Enter)
-		//	{
-		//		e.SuppressKeyPress = true;
-		//	}
-		//}
-
-		//private void textBox2_KeyDown(object sender, KeyEventArgs e)
-		//{
-		//	if( e.KeyCode == Keys.Enter)
-		//	{
-		//		e.SuppressKeyPress = true;
-		//	}
-		//}
+		private void textBox1_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				e.SuppressKeyPress = true;
+			}
+		}
 	}
 }
