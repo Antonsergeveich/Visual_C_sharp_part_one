@@ -15,6 +15,7 @@ namespace Сonverter
 		public Form1()
 		{
 			InitializeComponent();
+			button1.Enabled = false;
 		}
 		//Обрабатывает нажатие клавиши  в полях редактирования  Курс и Цена.
 		//Сначала нужно обычным образом создать функцию обработки событися KeyPress для компонента textBox1,
@@ -25,7 +26,8 @@ namespace Сonverter
 			if (e.KeyChar == '.') e.KeyChar = ',';
 			if (e.KeyChar == ',')
 			{
-				if ((textBox1.Text.IndexOf(',') != -1) || (textBox1.Text.Length == 0))
+				if ((textBox1.Text.IndexOf(',') != -1) ||
+					(textBox1.Text.Length == 0))
 				{
 					e.Handled = true;
 				}
@@ -34,33 +36,41 @@ namespace Сonverter
 			if (Char.IsControl(e.KeyChar))
 			{
 				if (e.KeyChar == (char)Keys.Enter)
-				{
-					if (sender.Equals(textBox1))
+					if (sender.Equals(textBox1.Text))
+					{
 						//клавиша <Enter> нажата в поле Курс
 						//переместить курсор в поле Цена
 						textBox2.Focus();
-					else
-						//Клавиша <Enter> нажата в поле Цена
-						button1.Focus();
-				}
+					}
+			}
+			else
+			{
+				//Клавиша <Enter> нажата в поле Цена
+				button1.Focus();
 				return;
 			}
 			//Остальные символы запрещены
 			e.Handled = true;
 		}
 
+
 		//Изменился текст в поле редактирования textBox1 или textBox2
 		private void textBox1_TextChanged(object sender, EventArgs e)
 		{
 			label3.Text = "";
-			if ((textBox1.Text.Length == 0) || 
+			if ((textBox1.Text.Length == 0) ||
 				(textBox2.Text.Length == 0))
-				//Если какое нибудь из полей не содержит данных, то сделать не доступной кнопку OK
+				//Если какое нибудь из полей не содержит данных,
+				//то сделать не доступной кнопку OK
 				button1.Enabled = false;
 			else
 				button1.Enabled = true;
 		}
 		//Щелчок на кнопке OK
+		private void textBox2_TextChanged(object sender, EventArgs e)
+		{
+			textBox1_TextChanged(sender, e);
+		}
 		private void button1_Click(object sender, EventArgs e)
 		{
 			double usd; //цена в долларах
