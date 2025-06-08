@@ -22,6 +22,14 @@ namespace Сonverter
 		//затем - указать её в качестве обработчика это же события для компонента textBox2
 		private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
 		{
+			if (e.KeyChar == (char)Keys.Back)
+			{
+				if (textBox1.Text.Length > 0)
+				{
+					textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
+					textBox1.SelectionStart = textBox1.Text.Length;
+				}
+			}
 			textBox_KeyPress(sender, e);
 		}
 		//Изменился текст в поле редактирования textBox1 или textBox2
@@ -53,6 +61,14 @@ namespace Сonverter
 		}
 		private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
 		{
+			if (e.KeyChar == (char)Keys.Back)
+			{
+				if (textBox2.Text.Length > 0)
+				{
+					textBox2.Text = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
+					textBox2.SelectionStart = textBox2.Text.Length;
+				}
+			}
 			textBox_KeyPress(sender, e);
 		}
 		private void textBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -106,7 +122,7 @@ namespace Сonverter
 
 		private void textBox2_KeyDown(object sender, KeyEventArgs e)
 		{
-			textBox1_KeyDown (sender, e);
+			textBox1_KeyDown(sender, e);
 		}
 	}
 }
