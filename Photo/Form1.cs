@@ -61,12 +61,10 @@ namespace Photo
 			{
 				button1.Enabled = true;
 			}
-			label2.Text = "";
 		}
 		//щелчок на radioButton
 		private void radioButton1_Click(object sender, EventArgs e)
 		{
-			label2.Text = "";
 			//Установить курсор в поле количество
 			textBox1.Focus();
 		}

@@ -33,10 +33,10 @@
 			this.radioButton1 = new System.Windows.Forms.RadioButton();
 			this.radioButton2 = new System.Windows.Forms.RadioButton();
 			this.radioButton3 = new System.Windows.Forms.RadioButton();
-			this.label2 = new System.Windows.Forms.Label();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.label3 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -82,30 +82,20 @@
 			this.radioButton3.Text = "18 X 24";
 			this.radioButton3.UseVisualStyleBackColor = true;
 			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label2.Location = new System.Drawing.Point(31, 162);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(75, 25);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "Count:";
-			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(229, 156);
+			this.textBox1.Location = new System.Drawing.Point(197, 156);
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(121, 31);
+			this.textBox1.Size = new System.Drawing.Size(177, 31);
 			this.textBox1.TabIndex = 5;
 			this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
 			this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(86, 220);
+			this.button1.Location = new System.Drawing.Point(76, 219);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(245, 39);
+			this.button1.Size = new System.Drawing.Size(249, 39);
 			this.button1.TabIndex = 6;
 			this.button1.Text = "OK";
 			this.button1.UseVisualStyleBackColor = true;
@@ -114,11 +104,20 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(44, 280);
+			this.label3.Location = new System.Drawing.Point(26, 277);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(79, 25);
 			this.label3.TabIndex = 7;
 			this.label3.Text = "Result:";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(233, 82);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(92, 25);
+			this.label2.TabIndex = 8;
+			this.label2.Text = "COUNT:";
 			// 
 			// Form1
 			// 
@@ -126,10 +125,10 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
 			this.ClientSize = new System.Drawing.Size(399, 357);
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.textBox1);
-			this.Controls.Add(this.label2);
 			this.Controls.Add(this.radioButton3);
 			this.Controls.Add(this.radioButton2);
 			this.Controls.Add(this.radioButton1);
@@ -153,10 +152,10 @@
 		private System.Windows.Forms.RadioButton radioButton1;
 		private System.Windows.Forms.RadioButton radioButton2;
 		private System.Windows.Forms.RadioButton radioButton3;
-		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label label2;
 	}
 }
 
