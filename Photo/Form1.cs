@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Photo
 {
@@ -25,9 +26,9 @@ namespace Photo
 			double price = 0; //цена
 			int n;            //количество фотографий
 			double sum;       //сумма
-			if (radioButton1.Checked) price = 8.50;
-			if (radioButton2.Checked) price = 10;
-			if (radioButton3.Checked) price = 15.5;
+			if (radioButton1.Checked) price = Convert.ToInt32(textBox2.Text); ;
+			if (radioButton2.Checked) price = Convert.ToInt32(textBox3.Text); ;
+			if (radioButton3.Checked) price = Convert.ToInt32(textBox4.Text); ;
 			n = Convert.ToInt32(textBox1.Text);
 			sum = n * price;
 			label3.Text = "Price: " + price.ToString("C") +
@@ -67,6 +68,19 @@ namespace Photo
 		{
 			//Установить курсор в поле количество
 			textBox1.Focus();
+		}
+
+		private void textBox1_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				e.SuppressKeyPress = true;
+				if (sender.Equals(textBox1))
+				{
+					button1.Focus();
+				}
+				return;
+			}
 		}
 	}
 }
