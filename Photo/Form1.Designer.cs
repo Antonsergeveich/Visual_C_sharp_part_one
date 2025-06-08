@@ -58,6 +58,7 @@
 			this.radioButton1.TabStop = true;
 			this.radioButton1.Text = "9 X 12";
 			this.radioButton1.UseVisualStyleBackColor = true;
+			this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
 			// 
 			// radioButton2
 			// 
@@ -84,22 +85,25 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(26, 159);
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label2.Location = new System.Drawing.Point(31, 162);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(92, 25);
+			this.label2.Size = new System.Drawing.Size(75, 25);
 			this.label2.TabIndex = 4;
-			this.label2.Text = "COUNT:";
+			this.label2.Text = "Count:";
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(155, 153);
+			this.textBox1.Location = new System.Drawing.Point(229, 156);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(121, 31);
 			this.textBox1.TabIndex = 5;
+			this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+			this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(31, 201);
+			this.button1.Location = new System.Drawing.Point(86, 220);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(245, 39);
 			this.button1.TabIndex = 6;
@@ -110,7 +114,7 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(26, 267);
+			this.label3.Location = new System.Drawing.Point(44, 280);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(79, 25);
 			this.label3.TabIndex = 7;
@@ -121,7 +125,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.ClientSize = new System.Drawing.Size(302, 334);
+			this.ClientSize = new System.Drawing.Size(399, 357);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.textBox1);
@@ -133,7 +137,7 @@
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+			this.Margin = new System.Windows.Forms.Padding(6);
 			this.MaximizeBox = false;
 			this.Name = "Form1";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
