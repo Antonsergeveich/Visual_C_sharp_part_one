@@ -7,13 +7,15 @@ void main()
 	setlocale(LC_ALL, "rus");
 	int a = 0;
 	int b = 0;
-	while (a == 0 || b == 0)
+	printf("¬ведите числа: ");
+	scanf("%d %d", &a, &b);
+	if (b == 0)
 	{
-		printf("¬ведите числа: ");
-		scanf("%d %d", &a, &b);
-
+		printf("%d %d %d n/a\n", a + b, a - b, a * b);
 	}
-
-	printf("%d %d %d %d", a + b, a - b, a * b, a / b);
-
+	else
+	{
+		printf("%d %d %d %d", a + b, a - b, a * b, a / b);
+	}
 }
+
