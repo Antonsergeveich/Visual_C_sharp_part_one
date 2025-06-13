@@ -30,7 +30,8 @@ bool is_prime(int x)
 		{
 			j = j - 2;
 		}
-		if (i == 1 || j != 9)
+		
+		if (i == 1 || (j != 9 && j > 9))
 		{
 			return true;
 		}
