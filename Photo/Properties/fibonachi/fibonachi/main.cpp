@@ -14,6 +14,7 @@ int main()
 	{
 		printf("n/a");
 	}
+	return 0;
 }
 int fib(int num)
 {
